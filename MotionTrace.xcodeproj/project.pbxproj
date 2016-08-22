@@ -12,6 +12,9 @@
 		DF840FCF1D68540C007D4755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF840FCD1D68540C007D4755 /* Main.storyboard */; };
 		DF840FD11D68540C007D4755 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF840FD01D68540C007D4755 /* Assets.xcassets */; };
 		DF840FD41D68540C007D4755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF840FD21D68540C007D4755 /* LaunchScreen.storyboard */; };
+		DF840FDC1D68543F007D4755 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF840FDB1D68543F007D4755 /* MapKit.framework */; };
+		DF840FDE1D68549E007D4755 /* LocateMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF840FDD1D68549E007D4755 /* LocateMotion.swift */; };
+		DF840FE11D6854E3007D4755 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF840FE01D6854E3007D4755 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		DF840FD01D68540C007D4755 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF840FD31D68540C007D4755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF840FD51D68540C007D4755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF840FDB1D68543F007D4755 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DF840FDD1D68549E007D4755 /* LocateMotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocateMotion.swift; sourceTree = "<group>"; };
+		DF840FE01D6854E3007D4755 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF840FE11D6854E3007D4755 /* CoreMotion.framework in Frameworks */,
+				DF840FDC1D68543F007D4755 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +64,23 @@
 			children = (
 				DF840FC91D68540C007D4755 /* AppDelegate.swift */,
 				DF840FCB1D68540C007D4755 /* ViewController.swift */,
+				DF840FDD1D68549E007D4755 /* LocateMotion.swift */,
 				DF840FCD1D68540C007D4755 /* Main.storyboard */,
 				DF840FD01D68540C007D4755 /* Assets.xcassets */,
 				DF840FD21D68540C007D4755 /* LaunchScreen.storyboard */,
 				DF840FD51D68540C007D4755 /* Info.plist */,
+				DF840FDF1D6854CD007D4755 /* Framework */,
 			);
 			path = MotionTrace;
+			sourceTree = "<group>";
+		};
+		DF840FDF1D6854CD007D4755 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				DF840FE01D6854E3007D4755 /* CoreMotion.framework */,
+				DF840FDB1D68543F007D4755 /* MapKit.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +116,14 @@
 					DF840FC51D68540C007D4755 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 5KRYNNRRYA;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -138,6 +165,7 @@
 			files = (
 				DF840FCC1D68540C007D4755 /* ViewController.swift in Sources */,
 				DF840FCA1D68540C007D4755 /* AppDelegate.swift in Sources */,
+				DF840FDE1D68549E007D4755 /* LocateMotion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +315,7 @@
 				DF840FDA1D68540C007D4755 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
